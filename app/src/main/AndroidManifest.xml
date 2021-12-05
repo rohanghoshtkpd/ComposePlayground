@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposePlayground">
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" >
+            android:name=".MainActivity3"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
