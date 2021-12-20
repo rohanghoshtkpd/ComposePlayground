@@ -4,10 +4,12 @@ import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.Card
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Button
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -31,30 +33,25 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyAppUI() {
     androidx.compose.material.Surface(modifier = Modifier.fillMaxWidth(), color = Color.LightGray) {
-        ProfileCard()
+        DemoViewPager()
     }
 }
 
 
 @Composable
-fun ProfileCard() {
-    Card(modifier = Modifier.fillMaxWidth(), elevation = 8.dp) {
-        (Row(modifier = Modifier.wrapContentSize()) {
-            ProfileCardImage()
-            ProfileContent()
-        })
-
+fun DemoViewPager() {
+    Row(horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.padding(5.dp)) {
+        Button(onClick = {}, modifier = Modifier
+            .weight(1f)
+            .padding(5.dp, 0.dp)) {
+            Text(text = "tan1")
+        }
+        Button(onClick = {}, modifier = Modifier
+            .weight(1f)
+            .padding(5.dp, 0.dp)) {
+            Text(text = "tab2")
+        }
     }
-}
-
-@Composable
-fun ProfileContent() {
-    TODO("Not yet implemented")
-}
-
-@Composable
-fun ProfileCardImage() {
-    TODO("Not yet implemented")
 }
 
 
