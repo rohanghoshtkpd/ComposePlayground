@@ -40,6 +40,8 @@ fun MyAppUI() {
 
 @Composable
 fun DemoViewPager() {
+
+
     Row(horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.padding(5.dp)) {
         Button(onClick = {}, modifier = Modifier
             .weight(1f)
